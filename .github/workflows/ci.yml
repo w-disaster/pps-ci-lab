@@ -2,7 +2,7 @@ name: Build HelloWorld
 on:
     push:
         branches:
-            - main # but only for the main branch
+            - develop # but only for the develop branch
 jobs:
     Build: # Job name
         runs-on: ubuntu-latest # Operating system selection 
