@@ -1,13 +1,15 @@
 name: Build HelloWorld
 on:
-    push: # On every push on any branch
+    push:
+        branches:
+            - main # but only for the main branch
 jobs:
     Build: # Job name
         runs-on: ubuntu-latest # Operating system selection 
         steps:
-          - name: Checkout # custom name Checkout the repository
+            #- name: Checkout # custom name Checkout the repository
             #uses: actions/checkout@v2 # Action implemented in this repository, tag "2"
-            run: git checkout develop
+            #run: git checkout develop
           - uses: joschi/setup-jdk@v2.3.0 # Action implemented in repository "joschi/setup-jdk" tag "2.3.0"
             with: # Actions parameters (action name omitted)
                 java-version: 15
